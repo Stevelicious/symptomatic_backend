@@ -11,10 +11,10 @@ public class DummyController {
 
     @GetMapping(value = "/dummy", produces = APPLICATION_JSON_VALUE)
     public Dummy getData() {
-        return Dummy.builder().message("Hello World1").build();
+        return Dummy.builder().message("Hello World!").build();
     }
 
-    @PostMapping(value = "/dummy2", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/dummy", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
     public Dummy postData(@RequestBody Dummy input) {
         return Dummy.builder().message("Hello " + input.getMessage()).build();
     }
