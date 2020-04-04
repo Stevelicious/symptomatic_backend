@@ -1,7 +1,7 @@
 steps:
 # build the container image
 - name: 'gcr.io/cloud-builders/java/mvn'
-  args: ['mvnw', 'clean', 'install']
+  args: ['clean', 'install']
 # build the container image
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/symptomatic_backend:$COMMIT_SHA', '.']
