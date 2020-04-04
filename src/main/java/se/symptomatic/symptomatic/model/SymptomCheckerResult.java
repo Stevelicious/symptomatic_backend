@@ -5,10 +5,15 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 public class SymptomCheckerResult {
-    int result;
+
+    long id;
+    List<SymptomCheckerDetailResult> symptomCheckerDetailResultList;
+
 }

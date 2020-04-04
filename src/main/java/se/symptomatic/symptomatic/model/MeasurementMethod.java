@@ -5,15 +5,12 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
-
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class SymptomCheckerRequest {
-    Symptom symptom;
-    LocalDate startDate;
-    LocalDate endDate;
-    int severity;
+public class MeasurementMethod {
+    long id;
+    String name;
+    String unit;
 }

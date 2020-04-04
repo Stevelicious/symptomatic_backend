@@ -10,11 +10,15 @@ import java.util.List;
 public class SymptomService {
     public List<Symptom> getSymptoms(){
         ArrayList<Symptom> symptoms = new ArrayList<>();
-        symptoms.add(new Symptom("1","Fever"));
-        symptoms.add(new Symptom("2","Cough"));
-        symptoms.add(new Symptom("3","Shortness of breath"));
-        symptoms.add(new Symptom("4","Fatigue"));
-        symptoms.add(new Symptom("5","Sore throat"));
+        symptoms.add(new Symptom(1,"Fever"));
+        symptoms.add(new Symptom(2,"Cough"));
+        symptoms.add(new Symptom(3,"Shortness of breath"));
+        symptoms.add(new Symptom(4,"Fatigue"));
+        symptoms.add(new Symptom(5,"Sore throat"));
         return symptoms;
+    }
+
+    public double getSymptomPercentage(long id){
+        return (id * 67) % 100;
     }
 }

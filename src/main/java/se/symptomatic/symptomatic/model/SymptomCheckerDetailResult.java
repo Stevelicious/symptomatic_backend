@@ -9,7 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Symptom {
-    long id;
-    String name;
+public class SymptomCheckerDetailResult{
+    Symptom symptom;
+    double percentage;
+
 }

@@ -5,11 +5,13 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Set;
+
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Symptom {
+public class SymptomChecker {
     long id;
-    String name;
+    Set<SymptomCheckerDetail> symptomCheckerDetailList;
 }
