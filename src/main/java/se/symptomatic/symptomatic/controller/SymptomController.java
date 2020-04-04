@@ -1,5 +1,6 @@
 package se.symptomatic.symptomatic.controller;
 
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,7 @@ public class SymptomController {
     @Autowired
     SymptomService symptomService;
 
+    @ApiOperation("Returns a list of symptoms")
     @GetMapping("symptoms")
     public List<Symptom> getSymptoms(){
         return  symptomService.getSymptoms();
