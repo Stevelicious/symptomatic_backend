@@ -26,7 +26,10 @@ public class SymptomCheckerService {
 
         SymptomChecker symptomChecker = symptomCheckerRepository.get(id);
         List<SymptomCheckerDetailResult> symptomCheckerDetailResults = symptomChecker.getSymptomCheckerDetailList().stream().map(symptomCheckerDetail ->
-                new SymptomCheckerDetailResult(symptomCheckerDetail.getSymptom(), symptomService.getSymptomPercentage(symptomCheckerDetail.getSymptom().getId()))
+                new SymptomCheckerDetailResult(symptomCheckerDetail.getSymptom(),
+                        symptomService.getClinicalSymptomPercentage(symptomCheckerDetail.getSymptom().getId()),
+                        symptomService.getRegisteredSymptomPercentage(symptomCheckerDetail.getSymptom().getId())
+                )
         ).collect(Collectors.toList());
 
         return new SymptomCheckerResult(id, symptomCheckerDetailResults);

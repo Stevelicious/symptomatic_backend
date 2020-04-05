@@ -19,7 +19,7 @@ public class SymptomService {
         return symptoms;
     }
 
-    public double getSymptomPercentage(long id){
+    public double getClinicalSymptomPercentage(long id){
         switch ((int)id){
             case 1:
                 return 93.0;
@@ -34,6 +34,22 @@ public class SymptomService {
             default:
                 throw new NotFoundException("Symptom " +id + " not found");
         }
+    }
 
+    public double getRegisteredSymptomPercentage(long id){
+        switch ((int)id){
+            case 1:
+                return 66.0;
+            case 2:
+                return 65.0;
+            case 3:
+                return 40.0;
+            case 4:
+                return 55.0;
+            case 5:
+                return 20.0;
+            default:
+                throw new NotFoundException("Symptom " +id + " not found");
+        }
     }
 }

@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class SymptomCheckerDetailResult{
     Symptom symptom;
-    double percentage;
+    double clinicalPercentage;
+    double registeredPercentage;
 
 }
